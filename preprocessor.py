@@ -1,9 +1,6 @@
 import re
 import pandas as pd
 
-f=open('believers.txt','r',encoding='utf-8')
-data=f.read()
-
 def preprocess(data):
     pattern = r'\d{1,2}\/\d{1,2}\/\d{2,4},\s\d{1,2}:\d{2}\s(?:am|pm)\s-\s'
 

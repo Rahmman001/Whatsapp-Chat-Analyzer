@@ -61,6 +61,7 @@ def most_common_words(selected_user,df):
 
     contains_non_alphabetic = lambda word: any(not char.isalpha() for char in word)
 
+
     f = open('stop_hinglish.txt','r')
     stop_words = f.read()
 

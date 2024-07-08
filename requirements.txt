@@ -5,4 +5,4 @@ urlextract
 wordcloud
 pandas
 emoji
-re
+regex

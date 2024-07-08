@@ -2,7 +2,6 @@ from urlextract import URLExtract
 from wordcloud import WordCloud
 import pandas as pd
 from collections import Counter
-import regex as re
 import emoji
 
 extract = URLExtract()
@@ -60,7 +59,7 @@ def create_wordcloud(selected_user,df):
 
 def most_common_words(selected_user,df):
 
-    contains_non_alphabet = lambda s: bool(re.search(r'[^a-zA-Z]', s))
+    contains_non_alphabetic = lambda word: any(not char.isalpha() for char in word)
 
     f = open('stop_hinglish.txt','r')
     stop_words = f.read()
@@ -75,7 +74,7 @@ def most_common_words(selected_user,df):
 
     for message in temp['message']:
         for word in message.lower().split():
-            if word not in stop_words and contains_non_alphabet(word)!=True :
+            if word not in stop_words and contains_non_alphabetic(word)!=True :
                 words.append(word)
 
     most_common_df = pd.DataFrame(Counter(words).most_common(20))

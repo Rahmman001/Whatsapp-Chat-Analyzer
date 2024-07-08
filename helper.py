@@ -59,8 +59,7 @@ def create_wordcloud(selected_user,df):
 
 def most_common_words(selected_user,df):
 
-    pattern = r'@\d{12}'
-    check_pattern_exists = lambda text: bool(re.search(pattern, text))
+    contains_non_alphabet = lambda s: bool(re.search(r'[^a-zA-Z]', s))
 
     f = open('stop_hinglish.txt','r')
     stop_words = f.read()
@@ -75,7 +74,7 @@ def most_common_words(selected_user,df):
 
     for message in temp['message']:
         for word in message.lower().split():
-            if word not in stop_words and check_pattern_exists(word)!=True :
+            if word not in stop_words and contains_non_alphabet(word)!=True :
                 words.append(word)
 
     most_common_df = pd.DataFrame(Counter(words).most_common(20))

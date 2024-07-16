@@ -27,5 +27,3 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/Rahmman001/Whatsapp-Chat-Analyzer.git
    cd Whatsapp-Chat-Analyzer
-
-[Demo Link](https://whatsapp-chat-analyzer-jmraadfzxo7vih3qztyzv6.streamlit.app/)

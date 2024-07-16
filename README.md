@@ -10,20 +10,4 @@ Welcome to the WhatsApp Chat Analyzer! This project provides an easy-to-use tool
 - **User Interaction**: Analyze interactions between users.
 - **Visualization**: Visualize data using interactive charts and graphs.
 
-## Getting Started
 
-### Prerequisites
-
-Ensure you have the following installed:
-
-- Python 3.7+
-- Pandas
-- Streamlit
-
-### Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Rahmman001/Whatsapp-Chat-Analyzer.git
-   cd Whatsapp-Chat-Analyzer

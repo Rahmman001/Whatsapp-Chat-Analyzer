@@ -1,1 +1,18 @@
-venv
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Backups and local configs
+app_backup.py
+.DS_Store
+
+# IDE configs
+.vscode/
+.idea/
